@@ -18,7 +18,7 @@ document.querySelectorAll('.btn').forEach(btn => {
 
     // Add click class for CSS effects (plays effect without holding)
     this.classList.add('btn-clicked');
-    const duration = this.dataset.effectDuration ? parseInt(this.dataset.effectDuration, 10) : 600;
+    const duration = this.dataset.effectDuration ? parseInt(this.dataset.effectDuration, 10) : 1000;
     setTimeout(() => this.classList.remove('btn-clicked'), duration);
   });
 });
