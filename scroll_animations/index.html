@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animations</title>
+  <link rel="stylesheet" href="scroll.css">
+  <style>
+    :root { --bg: #0f0f12; --card: #1a1a20; --accent: #e85578; --text: #e8e6e3; --muted: #8b8685; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'JetBrains Mono', monospace; background: var(--bg); color: var(--text); }
+    .back-link { display: inline-block; margin-bottom: 2rem; color: var(--muted); text-decoration: none; padding: 2rem; }
+    .back-link:hover { color: var(--accent); }
+    .spacer { height: 400px; }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress"></div>
+  <header class="sticky-header">
+    <a href="../index.html" class="back-link">← Back to home</a>
+    <h1 style="color: var(--accent); font-size: 1.25rem;">Scroll Animations</h1>
+  </header>
+
+  <div style="padding: 2rem;">
+    <div class="spacer"></div>
+
+    <section class="section">
+      <h2 style="color: var(--accent); margin-bottom: 1rem;">Fade In on Scroll</h2>
+      <p class="fade-in">This text fades in and slides up when you scroll to it.</p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <section class="section">
+      <h2 style="color: var(--accent); margin-bottom: 1rem;">Slide In from Left</h2>
+      <p class="slide-left">This slides in from the left.</p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <section class="section">
+      <h2 style="color: var(--accent); margin-bottom: 1rem;">Slide In from Right</h2>
+      <p class="slide-right">This slides in from the right.</p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <p style="color: var(--muted); text-align: center;">Sticky header & scroll progress bar at top</p>
+    <div class="spacer"></div>
+    <section class="section">
+      <h2 style="color: var(--accent); margin-bottom: 1rem;">Snap Scrolling</h2>
+      <a href="snap.html" style="color: var(--accent);">View snap scrolling demo →</a>
+    </section>
+    <div class="spacer"></div>
+  </div>
+
+  <script src="scroll.js"></script>
+</body>
+</html>

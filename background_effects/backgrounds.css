@@ -1,0 +1,87 @@
+/* Background Effects */
+.bg-animated-gradient {
+  background: linear-gradient(-45deg, #0f0f12, #1a1a20, #2a1a2a, #1a2a2a);
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+}
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-particles {
+  position: relative;
+  overflow: hidden;
+}
+.bg-particles::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(2px 2px at 20px 30px, #e85578, transparent),
+    radial-gradient(2px 2px at 40px 70px, #00f5d4, transparent),
+    radial-gradient(2px 2px at 50px 160px, #8b5cf6, transparent);
+  background-size: 200px 200px;
+  animation: particles-float 20s linear infinite;
+  opacity: 0.5;
+}
+@keyframes particles-float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50px, -50px); }
+}
+
+.bg-floating-shapes {
+  position: relative;
+  overflow: hidden;
+}
+.bg-floating-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 8s ease-in-out infinite;
+}
+.bg-floating-shapes .shape:nth-child(1) { width: 80px; height: 80px; background: #e85578; top: 20%; left: 10%; animation-delay: 0s; }
+.bg-floating-shapes .shape:nth-child(2) { width: 60px; height: 60px; background: #00f5d4; top: 60%; left: 80%; animation-delay: 2s; }
+.bg-floating-shapes .shape:nth-child(3) { width: 100px; height: 100px; background: #8b5cf6; top: 80%; left: 20%; animation-delay: 4s; }
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -30px); }
+}
+
+.bg-parallax {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-noise {
+  position: relative;
+}
+.bg-noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.bg-aurora {
+  background: linear-gradient(135deg, #0f0f12 0%, #1a1a20 50%, #0f0f12 100%);
+  position: relative;
+  overflow: hidden;
+}
+.bg-aurora::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(232, 85, 120, 0.15), transparent 50%),
+    radial-gradient(ellipse at 70% 30%, rgba(0, 245, 212, 0.1), transparent 50%);
+  animation: aurora 20s ease-in-out infinite;
+}
+@keyframes aurora {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-5%, -5%) rotate(5deg); }
+}

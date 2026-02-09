@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Effects</title>
+  <link rel="stylesheet" href="image-effects.css">
+  <style>
+    :root { --bg: #0f0f12; --card: #1a1a20; --accent: #e85578; --text: #e8e6e3; --muted: #8b8685; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'JetBrains Mono', monospace; background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem; }
+    .back-link { display: inline-block; margin-bottom: 2rem; color: var(--muted); text-decoration: none; }
+    .back-link:hover { color: var(--accent); }
+    header { text-align: center; margin-bottom: 3rem; }
+    h1 { font-size: 1.75rem; color: var(--accent); }
+    .section { margin-bottom: 3rem; }
+    .section h2 { font-size: 1.1rem; color: var(--accent); margin-bottom: 1.5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+    .demo-box { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .demo-box h3 { font-size: 0.85rem; margin: 0; color: var(--muted); }
+    .placeholder-img { width: 100%; height: 100%; background: linear-gradient(135deg, #2a2a32, #1a1a20); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.8rem; }
+    .spacer { height: 300px; }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back to home</a>
+  <header>
+    <h1>Image Effects</h1>
+    <p class="subtitle" style="color: var(--muted);">Image hover and reveal effects</p>
+  </header>
+
+  <section class="section">
+    <h2>Hover Zoom</h2>
+    <div class="grid">
+      <div class="demo-box">
+        <div class="img-hover-zoom">
+          <img src="https://picsum.photos/400/280" alt="">
+        </div>
+        <h3>Zoom on hover</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Before/After Slider</h2>
+    <div class="grid">
+      <div class="demo-box">
+        <div class="slider-wrap">
+          <img src="https://picsum.photos/400/280?blur=5" alt="" class="before">
+          <img src="https://picsum.photos/400/280" alt="">
+          <div class="slider-handle"></div>
+        </div>
+        <h3>Drag the handle</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Image Reveal on Scroll</h2>
+    <div class="spacer"></div>
+    <div class="grid">
+      <div class="demo-box">
+        <div class="img-reveal">
+          <img src="https://picsum.photos/400/280?random=1" alt="">
+        </div>
+        <h3>Scroll to reveal</h3>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </section>
+
+  <section class="section">
+    <h2>Tilt 3D Effect</h2>
+    <div class="grid">
+      <div class="demo-box">
+        <div class="img-tilt">
+          <img src="https://picsum.photos/400/280?random=2" alt="">
+        </div>
+        <h3>Move cursor over</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Lazy Load Blur → Sharp</h2>
+    <div class="grid">
+      <div class="demo-box">
+        <div class="img-lazy">
+          <img src="https://picsum.photos/400/280?random=3" alt="" loading="lazy">
+        </div>
+        <h3>Blur to sharp</h3>
+      </div>
+    </div>
+  </section>
+
+  <script src="image-effects.js"></script>
+</body>
+</html>

@@ -22,3 +22,28 @@ document.querySelectorAll('.btn').forEach(btn => {
     setTimeout(() => this.classList.remove('btn-clicked'), duration);
   });
 });
+
+// Magnetic button
+document.querySelectorAll('.btn-magnetic').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const rect = btn.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) * 0.3;
+    const y = (e.clientY - rect.top - rect.height / 2) * 0.3;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+  });
+});
+
+// Submit button states
+document.querySelector('#submit-btn')?.addEventListener('click', function() {
+  if (this.classList.contains('success')) return;
+  this.classList.add('loading');
+  this.querySelector('span').textContent = 'Submit';
+  setTimeout(() => {
+    this.classList.remove('loading');
+    this.classList.add('success');
+    this.querySelector('span').textContent = 'Success!';
+  }, 2000);
+});

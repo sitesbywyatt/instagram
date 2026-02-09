@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Effects</title>
+  <link rel="stylesheet" href="backgrounds.css">
+  <style>
+    :root { --bg: #0f0f12; --card: #1a1a20; --accent: #e85578; --text: #e8e6e3; --muted: #8b8685; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'JetBrains Mono', monospace; color: var(--text); min-height: 100vh; padding: 2rem; }
+    .back-link { display: inline-block; margin-bottom: 2rem; color: var(--muted); text-decoration: none; }
+    .back-link:hover { color: var(--accent); }
+    header { text-align: center; margin-bottom: 3rem; }
+    h1 { font-size: 1.75rem; color: var(--accent); }
+    .section { margin-bottom: 3rem; }
+    .section h2 { font-size: 1.1rem; color: var(--accent); margin-bottom: 1.5rem; }
+    .demo-box { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 3rem; margin-bottom: 1rem; min-height: 180px; position: relative; }
+    .demo-box h3 { font-size: 0.85rem; margin: 0 0 1rem 0; color: var(--muted); position: relative; z-index: 1; }
+    .demo-box p { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back to home</a>
+  <header>
+    <h1>Background Effects</h1>
+    <p class="subtitle" style="color: var(--muted);">Animated backgrounds</p>
+  </header>
+
+  <section class="section">
+    <h2>Animated Gradient</h2>
+    <div class="demo-box bg-animated-gradient">
+      <h3>Gradient shifts over time</h3>
+      <p>Background color smoothly transitions</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Particle Effects</h2>
+    <div class="demo-box bg-particles">
+      <h3>CSS particles (particles.js-style)</h3>
+      <p>Floating dots effect</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Floating Shapes</h2>
+    <div class="demo-box bg-floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <h3>Floating circles</h3>
+      <p>Shapes drift gently</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Noise / Grain Overlay</h2>
+    <div class="demo-box bg-noise" style="background: var(--card);">
+      <h3>Noise texture overlay</h3>
+      <p>Subtle grain for texture</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Aurora / Wave Effects</h2>
+    <div class="demo-box bg-aurora">
+      <h3>Aurora glow</h3>
+      <p>Soft moving gradients</p>
+    </div>
+  </section>
+</body>
+</html>

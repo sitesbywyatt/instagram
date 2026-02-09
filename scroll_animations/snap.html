@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap Scrolling</title>
+  <link rel="stylesheet" href="scroll.css">
+  <style>
+    :root { --bg: #0f0f12; --card: #1a1a20; --accent: #e85578; --text: #e8e6e3; --muted: #8b8685; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'JetBrains Mono', monospace; background: var(--bg); color: var(--text); }
+    .back-link { padding: 2rem; display: inline-block; color: var(--muted); text-decoration: none; position: fixed; z-index: 101; }
+    .back-link:hover { color: var(--accent); }
+    .snap-section { scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll; }
+    .snap-section > section {
+      scroll-snap-align: start;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .snap-section > section:nth-child(1) { background: #0f0f12; }
+    .snap-section > section:nth-child(2) { background: #1a1a20; }
+    .snap-section > section:nth-child(3) { background: #0f0f12; }
+    .snap-section > section:nth-child(4) { background: #1a1a20; }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to scroll</a>
+  <div class="snap-section">
+    <section><h2 style="color: var(--accent);">Section 1</h2><p style="color: var(--muted);">Scroll for snap</p></section>
+    <section><h2 style="color: var(--accent);">Section 2</h2><p style="color: var(--muted);">Smooth snap</p></section>
+    <section><h2 style="color: var(--accent);">Section 3</h2><p style="color: var(--muted);">Full page</p></section>
+    <section><h2 style="color: var(--accent);">Section 4</h2><p style="color: var(--muted);">Sections</p></section>
+  </div>
+</body>
+</html>

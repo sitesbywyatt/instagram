@@ -279,3 +279,63 @@
   transform: translateY(2px);
   box-shadow: 0 2px 0 #b83d5a, 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Gradient Animated Border */
+.btn-gradient-border {
+  background: linear-gradient(#0f0f12, #0f0f12) padding-box,
+    linear-gradient(90deg, #e85578, #00f5d4, #8b5cf6, #e85578) border-box;
+  color: white;
+  border: 2px solid transparent;
+  background-size: 100% 100%, 300% 100%;
+  animation: gradient-border-rotate 3s linear infinite;
+}
+@keyframes gradient-border-rotate {
+  0% { background-position: 0 0, 0% 50%; }
+  100% { background-position: 0 0, 300% 50%; }
+}
+
+/* Magnetic Button */
+.btn-magnetic {
+  background: #e85578;
+  color: white;
+  transition: transform 0.2s ease-out;
+}
+
+/* Submit States */
+.btn-submit {
+  background: #e85578;
+  color: white;
+  min-width: 140px;
+}
+.btn-submit.loading { pointer-events: none; }
+.btn-submit.loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  border: 2px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.btn-submit.loading span { opacity: 0; }
+.btn-submit.success { background: #22c55e; }
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Neumorphic */
+.btn-neumorphic {
+  background: #1a1a20;
+  color: #e8e6e3;
+  box-shadow: 6px 6px 12px #0a0a0c, -6px -6px 12px #2a2a38;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+.btn-neumorphic:hover {
+  box-shadow: 4px 4px 8px #0a0a0c, -4px -4px 8px #2a2a38;
+}
+.btn-neumorphic.btn-clicked {
+  box-shadow: inset 4px 4px 8px #0a0a0c, inset -4px -4px 8px #2a2a38;
+}

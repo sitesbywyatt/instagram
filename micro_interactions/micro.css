@@ -1,0 +1,79 @@
+/* Micro-interactions */
+.like-btn {
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+.like-btn:hover { transform: scale(1.2); }
+.like-btn.liked { animation: heart-pop 0.5s ease; }
+@keyframes heart-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1.2); }
+}
+
+.add-cart {
+  padding: 0.6rem 1.2rem;
+  background: #e85578;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.add-cart:hover { transform: scale(1.05); }
+.add-cart.added { background: #22c55e; }
+.add-cart.added { font-style: italic; }
+
+.input-focus {
+  padding: 0.6rem 1rem;
+  background: #1a1a20;
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: white;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-focus:focus {
+  outline: none;
+  border-color: #e85578;
+  box-shadow: 0 0 0 3px rgba(232, 85, 120, 0.2);
+}
+
+.input-error {
+  animation: error-shake 0.5s ease;
+}
+@keyframes error-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.copy-btn {
+  padding: 0.5rem 1rem;
+  background: #1a1a20;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.copy-btn.copied { border-color: #22c55e; color: #22c55e; }
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.star-rating span {
+  color: #444;
+  transition: color 0.2s, transform 0.2s;
+}
+.star-rating span:hover,
+.star-rating span.hover { color: #f59e0b; transform: scale(1.2); }
+.star-rating span.active { color: #f59e0b; }
