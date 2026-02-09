@@ -92,3 +92,116 @@
   border-radius: 4px;
   animation: spin 1s linear infinite;
 }
+
+/* 6. Growing Circle */
+.spinner.growing-circle {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.spinner.growing-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid #333;
+  border-radius: 50%;
+  animation: grow-circle 1.2s ease-out infinite;
+}
+
+@keyframes grow-circle {
+  0% { transform: scale(0.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* 7. Flip Square */
+.spinner.flip-square {
+  width: 36px;
+  height: 36px;
+  background: #333;
+  border-radius: 6px;
+  animation: flip 0.8s ease-in-out infinite;
+}
+
+@keyframes flip {
+  0%, 100% { transform: perspective(100px) rotateY(0deg); }
+  50% { transform: perspective(100px) rotateY(180deg); }
+}
+
+/* 8. Rotating Bars */
+.spinner.rotating-bars {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.spinner.rotating-bars span {
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 12px;
+  background: #333;
+  border-radius: 2px;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -6px;
+  transform-origin: center center;
+  animation: rotate-bars 1s linear infinite;
+}
+
+.spinner.rotating-bars span:nth-child(1) { transform: rotate(0deg); }
+.spinner.rotating-bars span:nth-child(2) { transform: rotate(120deg); }
+.spinner.rotating-bars span:nth-child(3) { transform: rotate(240deg); }
+
+.spinner.rotating-bars span:nth-child(1) { animation-delay: 0s; }
+.spinner.rotating-bars span:nth-child(2) { animation-delay: -0.33s; }
+.spinner.rotating-bars span:nth-child(3) { animation-delay: -0.66s; }
+
+@keyframes rotate-bars {
+  to { transform: rotate(360deg); }
+}
+
+/* 9. Orbit */
+.spinner.orbit {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.spinner.orbit::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-top: -19px;
+  margin-left: -5px;
+  transform-origin: center 19px;
+  animation: orbit 1s linear infinite;
+}
+
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+
+/* 10. Gradient Ring */
+.spinner.gradient-ring {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #333 0deg, #eee 90deg, #333 180deg, #eee 270deg);
+  animation: spin 1s linear infinite;
+}
+
+.spinner.gradient-ring::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: var(--spinner-bg, #1a1a20);
+  border-radius: 50%;
+}

@@ -11,6 +11,11 @@ A collection of pure CSS loading spinners—no JavaScript required. Each spinner
 | 3 | **Pulse Loader** | A single element that pulses in and out for a subtle effect |
 | 4 | **Dual Ring** | Two rings rotating in opposite directions for a more dynamic feel |
 | 5 | **Spinning Square** | A square that spins with a dashed border for a bold, geometric style |
+| 6 | **Growing Circle** | A circle that expands from the center and fades for a subtle effect |
+| 7 | **Flip Square** | A 3D square that flips on the Y-axis for a bold animation |
+| 8 | **Rotating Bars** | Three bars that rotate like clock hands for a classic loader feel |
+| 9 | **Orbit** | A dot orbiting around the center for a clean, minimal look |
+| 10 | **Gradient Ring** | A ring with a rotating gradient for a modern, polished effect |
 
 ## Usage
 
@@ -33,6 +38,21 @@ Include `spinners.css` and use the corresponding class on a container:
 
 <!-- Spinning Square -->
 <div class="spinner spinning-square"></div>
+
+<!-- Growing Circle -->
+<div class="spinner growing-circle"></div>
+
+<!-- Flip Square -->
+<div class="spinner flip-square"></div>
+
+<!-- Rotating Bars -->
+<div class="spinner rotating-bars"><span></span><span></span><span></span></div>
+
+<!-- Orbit -->
+<div class="spinner orbit"></div>
+
+<!-- Gradient Ring -->
+<div class="spinner gradient-ring"></div>
 ```
 
 ## Live Demo
