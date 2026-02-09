@@ -101,3 +101,129 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
+
+/* Glitch variants - different effects */
+.glitch-offset { position: relative; }
+.glitch-offset::before, .glitch-offset::after {
+  content: attr(data-text);
+  position: absolute; left: 0; top: 0;
+}
+.glitch-offset::before { color: #00f5d4; animation: glitch-1 0.3s infinite; clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%); }
+.glitch-offset::after { color: #e85578; animation: glitch-2 0.3s infinite; clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%); }
+
+.glitch-rgb { position: relative; }
+.glitch-rgb::before {
+  content: attr(data-text);
+  position: absolute; left: 0; top: 0;
+  color: #e85578;
+  animation: glitch-rgb-x 0.2s infinite;
+}
+.glitch-rgb::after {
+  content: attr(data-text);
+  position: absolute; left: 0; top: 0;
+  color: #00f5d4;
+  animation: glitch-rgb-y 0.2s infinite;
+}
+@keyframes glitch-rgb-x {
+  0% { transform: translate(0); }
+  33% { transform: translate(-3px, 0); }
+  66% { transform: translate(3px, 0); }
+  100% { transform: translate(0); }
+}
+@keyframes glitch-rgb-y {
+  0% { transform: translate(0); }
+  33% { transform: translate(3px, 0); }
+  66% { transform: translate(-3px, 0); }
+  100% { transform: translate(0); }
+}
+
+.glitch-flicker { animation: glitch-flicker 0.15s infinite; }
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  25%, 75% { opacity: 0.9; }
+}
+
+.glitch-skew { animation: glitch-skew 0.4s infinite; }
+@keyframes glitch-skew {
+  0%, 100% { transform: skew(0deg); }
+  25% { transform: skew(-2deg); }
+  75% { transform: skew(2deg); }
+}
+
+.glitch-shadow {
+  text-shadow: 2px 0 #e85578, -2px 0 #00f5d4;
+  animation: glitch-shadow 0.3s infinite;
+}
+@keyframes glitch-shadow {
+  0% { text-shadow: 2px 0 #e85578, -2px 0 #00f5d4; }
+  33% { text-shadow: -2px 0 #e85578, 2px 0 #00f5d4; }
+  66% { text-shadow: 2px 2px #e85578, -2px -2px #00f5d4; }
+  100% { text-shadow: 2px 0 #e85578, -2px 0 #00f5d4; }
+}
+
+/* Gradient variants */
+.gradient-horizontal { background: linear-gradient(90deg, #e85578, #00f5d4, #8b5cf6); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradient-flow 3s linear infinite; }
+.gradient-vertical { background: linear-gradient(180deg, #e85578, #00f5d4); background-size: auto 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradient-vert 4s linear infinite; }
+@keyframes gradient-vert { to { background-position: 0 200%; } }
+.gradient-radial { background: radial-gradient(circle at 50% 50%, #e85578, #00f5d4, #8b5cf6); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradient-radial 5s ease infinite; }
+@keyframes gradient-radial { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+.gradient-shine {
+  position: relative;
+  overflow: hidden;
+  color: #e85578;
+}
+.gradient-shine::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: gradient-shine 2s infinite;
+}
+@keyframes gradient-shine { to { left: 200%; } }
+
+/* Wavy variants */
+.wavy-bounce span { animation: wavy-bounce 0.6s ease-in-out infinite; }
+@keyframes wavy-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.wavy-rotate span { animation: wavy-rotate 1.2s ease-in-out infinite; }
+@keyframes wavy-rotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+}
+.wavy-scale span { animation: wavy-scale 0.8s ease-in-out infinite; }
+@keyframes wavy-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.wavy-slide span { animation: wavy-slide 0.8s ease-in-out infinite; }
+@keyframes wavy-slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+/* Flicker text */
+.text-flicker { animation: text-flicker 2s ease-in-out infinite; }
+@keyframes text-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Letter pop - sequential bounce */
+.letter-pop span { display: inline-block; animation: letter-pop 1.5s ease-in-out infinite; }
+.letter-pop span:nth-child(1) { animation-delay: 0s; }
+.letter-pop span:nth-child(2) { animation-delay: 0.1s; }
+.letter-pop span:nth-child(3) { animation-delay: 0.2s; }
+.letter-pop span:nth-child(4) { animation-delay: 0.3s; }
+.letter-pop span:nth-child(5) { animation-delay: 0.4s; }
+.letter-pop span:nth-child(6) { animation-delay: 0.5s; }
+.letter-pop span:nth-child(7) { animation-delay: 0.6s; }
+.letter-pop span:nth-child(8) { animation-delay: 0.7s; }
+@keyframes letter-pop {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1.2); }
+}

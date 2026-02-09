@@ -23,6 +23,10 @@
 .skill-bar.visible .skill-fill {
   width: var(--skill, 0%);
 }
+.skill-fill.static {
+  width: var(--skill, 0%) !important;
+  transition: none;
+}
 
 .pie-chart {
   width: 120px;

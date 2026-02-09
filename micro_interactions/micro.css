@@ -40,8 +40,12 @@
 }
 .input-focus:focus {
   outline: none;
-  border-color: #e85578;
+  border-color: var(--focus-color, #e85578);
   box-shadow: 0 0 0 3px rgba(232, 85, 120, 0.2);
+}
+.input-focus.input-focus-cyan:focus {
+  border-color: #00f5d4;
+  box-shadow: 0 0 0 3px rgba(0, 245, 212, 0.2);
 }
 
 .input-error {

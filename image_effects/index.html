@@ -18,7 +18,6 @@
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
     .demo-box { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
     .demo-box h3 { font-size: 0.85rem; margin: 0; color: var(--muted); }
-    .placeholder-img { width: 100%; height: 100%; background: linear-gradient(135deg, #2a2a32, #1a1a20); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.8rem; }
     .spacer { height: 300px; }
   </style>
 </head>
@@ -26,63 +25,15 @@
   <a href="../index.html" class="back-link">← Back to home</a>
   <header>
     <h1>Image Effects</h1>
-    <p class="subtitle" style="color: var(--muted);">Image hover and reveal effects</p>
+    <p class="subtitle" style="color: var(--muted);">Each one is unique</p>
   </header>
 
   <section class="section">
-    <h2>Hover Zoom</h2>
+    <h2>Unique Image Effects</h2>
     <div class="grid">
-      <div class="demo-box"><div class="img-hover-zoom"><img src="https://picsum.photos/400/280?1" alt=""></div><h3>Zoom 1</h3></div>
-      <div class="demo-box"><div class="img-hover-zoom"><img src="https://picsum.photos/400/280?2" alt=""></div><h3>Zoom 2</h3></div>
-      <div class="demo-box"><div class="img-hover-zoom"><img src="https://picsum.photos/400/280?3" alt=""></div><h3>Zoom 3</h3></div>
-      <div class="demo-box"><div class="img-hover-zoom"><img src="https://picsum.photos/400/280?4" alt=""></div><h3>Zoom 4</h3></div>
-      <div class="demo-box"><div class="img-hover-zoom"><img src="https://picsum.photos/400/280?5" alt=""></div><h3>Zoom 5</h3></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Before/After Slider</h2>
-    <div class="grid">
-      <div class="demo-box"><div class="slider-wrap"><img src="https://picsum.photos/400/280?blur=5" alt="" class="before"><img src="https://picsum.photos/400/280?10" alt=""><div class="slider-handle"></div></div><h3>Slider 1</h3></div>
-      <div class="demo-box"><div class="slider-wrap"><img src="https://picsum.photos/400/280?blur=5" alt="" class="before"><img src="https://picsum.photos/400/280?11" alt=""><div class="slider-handle"></div></div><h3>Slider 2</h3></div>
-      <div class="demo-box"><div class="slider-wrap"><img src="https://picsum.photos/400/280?blur=5" alt="" class="before"><img src="https://picsum.photos/400/280?12" alt=""><div class="slider-handle"></div></div><h3>Slider 3</h3></div>
-      <div class="demo-box"><div class="slider-wrap"><img src="https://picsum.photos/400/280?blur=5" alt="" class="before"><img src="https://picsum.photos/400/280?13" alt=""><div class="slider-handle"></div></div><h3>Slider 4</h3></div>
-      <div class="demo-box"><div class="slider-wrap"><img src="https://picsum.photos/400/280?blur=5" alt="" class="before"><img src="https://picsum.photos/400/280?14" alt=""><div class="slider-handle"></div></div><h3>Slider 5</h3></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Image Reveal on Scroll</h2>
-    <div class="spacer"></div>
-    <div class="grid">
-      <div class="demo-box"><div class="img-reveal"><img src="https://picsum.photos/400/280?20" alt=""></div><h3>Reveal 1</h3></div>
-      <div class="demo-box"><div class="img-reveal"><img src="https://picsum.photos/400/280?21" alt=""></div><h3>Reveal 2</h3></div>
-      <div class="demo-box"><div class="img-reveal"><img src="https://picsum.photos/400/280?22" alt=""></div><h3>Reveal 3</h3></div>
-      <div class="demo-box"><div class="img-reveal"><img src="https://picsum.photos/400/280?23" alt=""></div><h3>Reveal 4</h3></div>
-      <div class="demo-box"><div class="img-reveal"><img src="https://picsum.photos/400/280?24" alt=""></div><h3>Reveal 5</h3></div>
-    </div>
-    <div class="spacer"></div>
-  </section>
-
-  <section class="section">
-    <h2>Tilt 3D Effect</h2>
-    <div class="grid">
-      <div class="demo-box"><div class="img-tilt"><img src="https://picsum.photos/400/280?30" alt=""></div><h3>Tilt 1</h3></div>
-      <div class="demo-box"><div class="img-tilt"><img src="https://picsum.photos/400/280?31" alt=""></div><h3>Tilt 2</h3></div>
-      <div class="demo-box"><div class="img-tilt"><img src="https://picsum.photos/400/280?32" alt=""></div><h3>Tilt 3</h3></div>
-      <div class="demo-box"><div class="img-tilt"><img src="https://picsum.photos/400/280?33" alt=""></div><h3>Tilt 4</h3></div>
-      <div class="demo-box"><div class="img-tilt"><img src="https://picsum.photos/400/280?34" alt=""></div><h3>Tilt 5</h3></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Lazy Load Blur → Sharp</h2>
-    <div class="grid">
-      <div class="demo-box"><div class="img-lazy"><img src="https://picsum.photos/400/280?40" alt="" loading="lazy"></div><h3>Lazy 1</h3></div>
-      <div class="demo-box"><div class="img-lazy"><img src="https://picsum.photos/400/280?41" alt="" loading="lazy"></div><h3>Lazy 2</h3></div>
-      <div class="demo-box"><div class="img-lazy"><img src="https://picsum.photos/400/280?42" alt="" loading="lazy"></div><h3>Lazy 3</h3></div>
-      <div class="demo-box"><div class="img-lazy"><img src="https://picsum.photos/400/280?43" alt="" loading="lazy"></div><h3>Lazy 4</h3></div>
-      <div class="demo-box"><div class="img-lazy"><img src="https://picsum.photos/400/280?44" alt="" loading="lazy"></div><h3>Lazy 5</h3></div>
+      <div class="demo-box"><div class="img-hover-zoom"><img src="https://picsum.photos/400/280?1" alt=""></div><h3>Hover Zoom</h3></div>
+      <div class="demo-box"><div class="slider-wrap"><img src="https://picsum.photos/400/280?blur=5" alt="" class="before"><img src="https://picsum.photos/400/280?10" alt=""><div class="slider-handle"></div></div><h3>Before/After Slider</h3></div>
+      <div class="demo-box"><div class="img-tilt"><img src="https://picsum.photos/400/280?30" alt=""></div><h3>Tilt 3D</h3></div>
     </div>
   </section>
 

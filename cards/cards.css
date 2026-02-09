@@ -78,3 +78,14 @@
   transform: scale(1.05);
   padding: 2.5rem;
 }
+
+/* Card variants */
+.card-hover-lift.card-glow:hover { box-shadow: 0 0 30px rgba(232, 85, 120, 0.4); }
+.card-hover-lift.card-cyan:hover { box-shadow: 0 0 30px rgba(0, 245, 212, 0.3); }
+.card-glass.card-tinted { background: rgba(232, 85, 120, 0.08); }
+.card-glass.card-cool { background: rgba(0, 245, 212, 0.08); }
+.card-3d-flip .card-3d-flip-back.card-back-cyan { background: #00f5d4; color: #0f0f12; }
+.card-3d-flip .card-3d-flip-back.card-back-purple { background: #8b5cf6; }
+.card-3d-flip .card-3d-flip-back.card-back-gradient { background: linear-gradient(135deg, #e85578, #8b5cf6); }
+.card-bordered { border: 2px solid #e85578; background: transparent; }
+.card-bordered:hover { border-color: #00f5d4; box-shadow: 0 0 20px rgba(0, 245, 212, 0.2); }

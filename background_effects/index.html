@@ -18,67 +18,22 @@
     .demo-box { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 3rem; margin-bottom: 1rem; min-height: 180px; position: relative; }
     .demo-box h3 { font-size: 0.85rem; margin: 0 0 1rem 0; color: var(--muted); position: relative; z-index: 1; }
     .demo-box p { position: relative; z-index: 1; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
   </style>
 </head>
 <body>
   <a href="../index.html" class="back-link">← Back to home</a>
   <header>
     <h1>Background Effects</h1>
-    <p class="subtitle" style="color: var(--muted);">Animated backgrounds</p>
+    <p class="subtitle" style="color: var(--muted);">Each one is unique</p>
   </header>
 
   <section class="section">
-    <h2>Animated Gradient</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-      <div class="demo-box bg-animated-gradient"><h3>Gradient 1</h3><p>Shifts over time</p></div>
-      <div class="demo-box bg-animated-gradient"><h3>Gradient 2</h3><p>Color flow</p></div>
-      <div class="demo-box bg-animated-gradient"><h3>Gradient 3</h3><p>Smooth transition</p></div>
-      <div class="demo-box bg-animated-gradient"><h3>Gradient 4</h3><p>Animated bg</p></div>
-      <div class="demo-box bg-animated-gradient"><h3>Gradient 5</h3><p>Cycling colors</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Particle Effects</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-      <div class="demo-box bg-particles"><h3>Particles 1</h3><p>Floating dots</p></div>
-      <div class="demo-box bg-particles"><h3>Particles 2</h3><p>Dot effect</p></div>
-      <div class="demo-box bg-particles"><h3>Particles 3</h3><p>Moving dots</p></div>
-      <div class="demo-box bg-particles"><h3>Particles 4</h3><p>Particle style</p></div>
-      <div class="demo-box bg-particles"><h3>Particles 5</h3><p>Animated bg</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Floating Shapes</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-      <div class="demo-box bg-floating-shapes"><div class="shape"></div><div class="shape"></div><div class="shape"></div><h3>Shapes 1</h3><p>Drifting circles</p></div>
-      <div class="demo-box bg-floating-shapes"><div class="shape"></div><div class="shape"></div><div class="shape"></div><h3>Shapes 2</h3><p>Floating</p></div>
-      <div class="demo-box bg-floating-shapes"><div class="shape"></div><div class="shape"></div><div class="shape"></div><h3>Shapes 3</h3><p>Soft motion</p></div>
-      <div class="demo-box bg-floating-shapes"><div class="shape"></div><div class="shape"></div><div class="shape"></div><h3>Shapes 4</h3><p>Gentle float</p></div>
-      <div class="demo-box bg-floating-shapes"><div class="shape"></div><div class="shape"></div><div class="shape"></div><h3>Shapes 5</h3><p>Moving shapes</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Noise / Grain Overlay</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-      <div class="demo-box bg-noise" style="background: var(--card);"><h3>Noise 1</h3><p>Grain texture</p></div>
-      <div class="demo-box bg-noise" style="background: var(--card);"><h3>Noise 2</h3><p>Film grain</p></div>
-      <div class="demo-box bg-noise" style="background: var(--card);"><h3>Noise 3</h3><p>Texture</p></div>
-      <div class="demo-box bg-noise" style="background: var(--card);"><h3>Noise 4</h3><p>Overlay</p></div>
-      <div class="demo-box bg-noise" style="background: var(--card);"><h3>Noise 5</h3><p>Suble grain</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Aurora / Wave Effects</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-      <div class="demo-box bg-aurora"><h3>Aurora 1</h3><p>Soft glow</p></div>
-      <div class="demo-box bg-aurora"><h3>Aurora 2</h3><p>Moving gradients</p></div>
-      <div class="demo-box bg-aurora"><h3>Aurora 3</h3><p>Wave effect</p></div>
-      <div class="demo-box bg-aurora"><h3>Aurora 4</h3><p>Northern lights</p></div>
-      <div class="demo-box bg-aurora"><h3>Aurora 5</h3><p>Soft motion</p></div>
+    <h2>Unique Background Effects</h2>
+    <div class="grid">
+      <div class="demo-box bg-animated-gradient"><h3>Animated Gradient</h3><p>Color flow</p></div>
+      <div class="demo-box bg-particles"><h3>Particles</h3><p>Floating dots</p></div>
+      <div class="demo-box bg-floating-shapes"><div class="shape"></div><div class="shape"></div><div class="shape"></div><h3>Floating Shapes</h3><p>Drifting circles</p></div>
     </div>
   </section>
 </body>

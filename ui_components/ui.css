@@ -133,3 +133,31 @@
 .toast.show {
   transform: translateX(0);
 }
+
+/* Toggle variants */
+.toggle.toggle-sm { width: 40px; height: 22px; }
+.toggle.toggle-sm::after { width: 16px; height: 16px; transform: translateX(0); }
+.toggle.toggle-sm.active::after { transform: translateX(18px); }
+.toggle.toggle-lg { width: 64px; height: 34px; }
+.toggle.toggle-lg::after { width: 26px; height: 26px; top: 4px; left: 4px; }
+.toggle.toggle-lg.active::after { transform: translateX(30px); }
+.toggle.toggle-cyan.active { background: #00f5d4; }
+.toggle.toggle-square { border-radius: 6px; }
+.toggle.toggle-square::after { border-radius: 4px; }
+
+/* Tooltip positions */
+.tooltip-wrap .tooltip-bottom {
+  bottom: auto;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+}
+.tooltip-wrap:hover .tooltip-bottom {
+  transform: translateX(-50%) translateY(4px);
+}
+.tooltip-wrap .tooltip-neon {
+  background: transparent;
+  color: #00f5d4;
+  box-shadow: 0 0 10px #00f5d4;
+  border: 1px solid #00f5d4;
+}
