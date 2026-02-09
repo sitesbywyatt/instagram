@@ -1,0 +1,278 @@
+/* ============================================
+   Buttons - Styled buttons with click effects
+   ============================================ */
+
+.btn {
+  font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1. Solid Press */
+.btn-solid-press {
+  background: #e85578;
+  color: white;
+}
+.btn-solid-press:active {
+  transform: scale(0.95);
+}
+
+/* 2. Outline Fill */
+.btn-outline-fill {
+  background: transparent;
+  color: #e85578;
+  border: 2px solid #e85578;
+}
+.btn-outline-fill:active {
+  background: #e85578;
+  color: #0f0f12;
+}
+
+/* 3. Gradient Shift */
+.btn-gradient-shift {
+  background: linear-gradient(135deg, #e85578, #c44569);
+  color: white;
+}
+.btn-gradient-shift:active {
+  background: linear-gradient(135deg, #c44569, #a03559);
+  transform: scale(0.98);
+}
+
+/* 4. Neon Glow */
+.btn-neon-glow {
+  background: transparent;
+  color: #00f5d4;
+  border: 2px solid #00f5d4;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.3);
+}
+.btn-neon-glow:active {
+  box-shadow: 0 0 25px rgba(0, 245, 212, 0.8), inset 0 0 15px rgba(0, 245, 212, 0.2);
+}
+
+/* 5. Ripple */
+.btn-ripple {
+  background: #6366f1;
+  color: white;
+}
+.btn-ripple .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple-expand 0.6s ease-out;
+  pointer-events: none;
+}
+@keyframes ripple-expand {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* 6. Bounce */
+.btn-bounce {
+  background: #f59e0b;
+  color: #0f0f12;
+}
+.btn-bounce:active {
+  animation: btn-bounce 0.4s ease;
+}
+@keyframes btn-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* 7. Shine Sweep */
+.btn-shine {
+  background: #8b5cf6;
+  color: white;
+}
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0s;
+}
+.btn-shine:active::after {
+  left: 100%;
+  transition: left 0.5s ease;
+}
+
+/* 8. Pulse Ring */
+.btn-pulse-ring {
+  background: #ec4899;
+  color: white;
+}
+.btn-pulse-ring:active::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #ec4899;
+  border-radius: 10px;
+  animation: pulse-ring 0.6s ease-out;
+}
+@keyframes pulse-ring {
+  to {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* 9. Morph */
+.btn-morph {
+  background: #14b8a6;
+  color: white;
+}
+.btn-morph:active {
+  border-radius: 24px;
+}
+
+/* 10. Squeeze */
+.btn-squeeze {
+  background: #f43f5e;
+  color: white;
+}
+.btn-squeeze:active {
+  transform: scaleX(0.9);
+}
+
+/* 11. Flip */
+.btn-flip {
+  background: #06b6d4;
+  color: white;
+  perspective: 200px;
+}
+.btn-flip:active {
+  transform: rotateX(15deg);
+}
+
+/* 12. Slide Fill */
+.btn-slide-fill {
+  background: transparent;
+  color: #e85578;
+  border: 2px solid #e85578;
+}
+.btn-slide-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #e85578;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.btn-slide-fill:active::before {
+  width: 100%;
+}
+.btn-slide-fill:active {
+  color: white;
+}
+
+/* 13. Glass */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-glass:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 14. Underline */
+.btn-underline {
+  background: transparent;
+  color: #e85578;
+  border: none;
+  border-radius: 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+.btn-underline:active {
+  border-bottom-color: #e85578;
+}
+
+/* 15. Shake */
+.btn-shake {
+  background: #84cc16;
+  color: #0f0f12;
+}
+.btn-shake:active {
+  animation: btn-shake 0.4s ease;
+}
+@keyframes btn-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* 16. Soft Shadow */
+.btn-soft-shadow {
+  background: #64748b;
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.btn-soft-shadow:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.btn-soft-shadow:active {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+/* 17. Dashed */
+.btn-dashed {
+  background: transparent;
+  color: #e85578;
+  border: 2px dashed #e85578;
+}
+.btn-dashed:active {
+  border-style: solid;
+}
+
+/* 18. Glow Pulse */
+.btn-glow-pulse {
+  background: #a855f7;
+  color: white;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+.btn-glow-pulse:active {
+  animation: glow-pulse 0.5s ease;
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.8); }
+}
+
+/* 19. Corner Fold */
+.btn-corner-fold {
+  background: #0ea5e9;
+  color: white;
+}
+.btn-corner-fold:active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%);
+}
+
+/* 20. 3D Press */
+.btn-3d-press {
+  background: #e85578;
+  color: white;
+  box-shadow: 0 4px 0 #b83d5a, 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-3d-press:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #b83d5a, 0 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -13,4 +13,5 @@ This repo can be published as a GitHub Site. To enable:
 
 ## Sections
 
-- **[CSS Spinners](css_spinners/)** — 5 pure CSS loading indicators, each in its own demo box
+- **[CSS Spinners](css_spinners/)** — 10 pure CSS loading indicators, each in its own demo box
+- **[Buttons](buttons/)** — 20 styled buttons with unique click effects
