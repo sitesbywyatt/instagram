@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Spinners</title>
+  <link rel="stylesheet" href="spinners.css">
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --card: #1a1a20;
+      --accent: #e85578;
+      --text: #e8e6e3;
+      --muted: #8b8685;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .spinner-box {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .spinner-box:hover {
+      border-color: rgba(232, 85, 120, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .spinner-box h3 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .spinner-box .spinner-wrapper {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back to home</a>
+  <header>
+    <h1>CSS Spinners</h1>
+    <p class="subtitle">Pure CSS loading indicators — no JavaScript</p>
+  </header>
+
+  <div class="grid">
+    <div class="spinner-box">
+      <div class="spinner-wrapper">
+        <div class="spinner bouncing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <h3>1. Bouncing Dots</h3>
+    </div>
+
+    <div class="spinner-box">
+      <div class="spinner-wrapper">
+        <div class="spinner ring-spinner"></div>
+      </div>
+      <h3>2. Ring Spinner</h3>
+    </div>
+
+    <div class="spinner-box">
+      <div class="spinner-wrapper">
+        <div class="spinner pulse-loader"></div>
+      </div>
+      <h3>3. Pulse Loader</h3>
+    </div>
+
+    <div class="spinner-box">
+      <div class="spinner-wrapper">
+        <div class="spinner dual-ring"></div>
+      </div>
+      <h3>4. Dual Ring</h3>
+    </div>
+
+    <div class="spinner-box">
+      <div class="spinner-wrapper">
+        <div class="spinner spinning-square"></div>
+      </div>
+      <h3>5. Spinning Square</h3>
+    </div>
+  </div>
+</body>
+</html>
