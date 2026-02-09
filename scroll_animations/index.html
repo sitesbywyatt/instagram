@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="scroll.css">
   <style>
     :root { --bg: #0f0f12; --card: #1a1a20; --accent: #e85578; --text: #e8e6e3; --muted: #8b8685; }
+    body { background: var(--bg); }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: 'JetBrains Mono', monospace; background: var(--bg); color: var(--text); }
     .back-link { display: inline-block; margin-bottom: 2rem; color: var(--muted); text-decoration: none; padding: 2rem; }
@@ -26,26 +27,54 @@
 
     <section class="section">
       <h2 style="color: var(--accent); margin-bottom: 1rem;">Fade In on Scroll</h2>
-      <p class="fade-in">This text fades in and slides up when you scroll to it.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem;">
+        <p class="fade-in">Fade in 1</p>
+        <p class="fade-in">Fade in 2</p>
+        <p class="fade-in">Fade in 3</p>
+        <p class="fade-in">Fade in 4</p>
+        <p class="fade-in">Fade in 5</p>
+      </div>
     </section>
 
     <div class="spacer"></div>
 
     <section class="section">
       <h2 style="color: var(--accent); margin-bottom: 1rem;">Slide In from Left</h2>
-      <p class="slide-left">This slides in from the left.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem;">
+        <p class="slide-left">Slide left 1</p>
+        <p class="slide-left">Slide left 2</p>
+        <p class="slide-left">Slide left 3</p>
+        <p class="slide-left">Slide left 4</p>
+        <p class="slide-left">Slide left 5</p>
+      </div>
     </section>
 
     <div class="spacer"></div>
 
     <section class="section">
       <h2 style="color: var(--accent); margin-bottom: 1rem;">Slide In from Right</h2>
-      <p class="slide-right">This slides in from the right.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem;">
+        <p class="slide-right">Slide right 1</p>
+        <p class="slide-right">Slide right 2</p>
+        <p class="slide-right">Slide right 3</p>
+        <p class="slide-right">Slide right 4</p>
+        <p class="slide-right">Slide right 5</p>
+      </div>
     </section>
 
     <div class="spacer"></div>
 
-    <p style="color: var(--muted); text-align: center;">Sticky header & scroll progress bar at top</p>
+    <section class="section">
+      <h2 style="color: var(--accent); margin-bottom: 1rem;">Scroll Progress & More</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem;">
+        <div class="fade-in" style="background: var(--card); padding: 1rem; border-radius: 8px;">Card 1</div>
+        <div class="fade-in" style="background: var(--card); padding: 1rem; border-radius: 8px;">Card 2</div>
+        <div class="fade-in" style="background: var(--card); padding: 1rem; border-radius: 8px;">Card 3</div>
+        <div class="fade-in" style="background: var(--card); padding: 1rem; border-radius: 8px;">Card 4</div>
+        <div class="fade-in" style="background: var(--card); padding: 1rem; border-radius: 8px;">Card 5</div>
+      </div>
+      <p style="color: var(--muted); margin-top: 1rem;">+ Sticky header & scroll progress bar at top</p>
+    </section>
     <div class="spacer"></div>
     <section class="section">
       <h2 style="color: var(--accent); margin-bottom: 1rem;">Snap Scrolling</h2>

@@ -47,8 +47,8 @@
   fill: none;
   stroke: #e85578;
   stroke-width: 2;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
   animation: draw-line 2s ease forwards;
 }
 @keyframes draw-line {

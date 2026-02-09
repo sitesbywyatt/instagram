@@ -1,4 +1,4 @@
-// Tilt on mouse move
+// Tilt on mouse move (handles all .card-tilt)
 document.querySelectorAll('.card-tilt').forEach(card => {
   card.addEventListener('mousemove', e => {
     const rect = card.getBoundingClientRect();
